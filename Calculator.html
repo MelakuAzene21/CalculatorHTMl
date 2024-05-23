@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,intial-scale=1.0 ">
+        <title>Make calculator</title>
+        <style>
+           *{
+    margin: 0px;
+    padding: 0px;
+    font-family:'poppins',sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 50%;
+    background: #e3f9ff;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    left: 15px;
+
+}
+
+.calculator{
+   background:#3a4452;
+   border-radius: 10px; 
+  
+}
+.calculator form input {
+    border: 0px;
+    outline: 0px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+   /*box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1) 5px 5px 15px rgba(0, 0, 0, 0.2)*/
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+
+}
+form div.display{
+    width: 100%;
+    display: flex;
+    background-color: rgb(43, 23, 23);
+    color: white;
+}
+form div.display input{
+    text-align: left;
+   width: 100%;
+    font-size: 25px;
+    box-shadow: none;
+    color: black;
+    background-color: whitesmoke;
+    
+}
+form input.operators{
+   background-color: blueviolet;
+}
+form input.clear{
+    background-color: red;
+}
+form input.equal{
+    width: 100px;
+    background-color: green;
+}
+#sub{
+    margin-top: 40px;
+    font-style: italic;
+    font-size: large;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: aqua;
+}
+ div.mydivs {
+    display: flex;
+} 
+        </style>
+        </head>
+        <body>
+            <h2>My name is Melaku Azene</h2>
+             <h3 id="h1">This is calculator</h3>
+             <div class="container">
+                <div class="calculator">
+                   <form >
+                    <div class="display">
+                        <input type="text" name="display">
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="display.value=' ' " class="clear">
+                        <input type="button" value="DE"onclick="display.value=display.value.toString().slice(0,-1)" class="clear">
+                        <input type="button" value="." onclick="display.value+='.' " class="operators">
+                        <input type="button" value="/" onclick="display.value+='/' " class="operators">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value+='7' ">
+                        <input type="button" value="8" onclick="display.value+='8' ">
+                        <input type="button" value="9" onclick="display.value+='9' ">
+                        <input type="button" value="*" onclick="display.value+='*' " class="operators">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value+='4' ">
+                        <input type="button" value="5" onclick="display.value+='5' ">
+                        <input type="button" value="6" onclick="display.value+='6' ">
+                        <input type="button" value="-" onclick="display.value+='-' " class="operators">
+        
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value+='1' ">
+                        <input type="button" value="2" onclick="display.value+='2' ">
+                        <input type="button" value="3" onclick="display.value+='3' ">
+                        <input type="button" value="+" onclick="display.value+='+' " class="operators">
+                        <div>
+                            <input type="button" value="00" onclick="display.value+='00'">
+                            <input type="button" value="0" onclick="display.value+='0'">
+                            <input type="button" value="=" onclick="display.value=eval(display.value)" class="equal">
+                            
+                        </div>
+                    </div>
+                   </form>
+                </div>
+             </div>
+             
+             
+            
+         
+             <script src="My_JS.js"></script>
+        </body>
+    
+</html>
